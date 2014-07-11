@@ -1,0 +1,113 @@
+ div.dataTables_length label {
+
+    text-align: right;
+    margin-bottom: -20px;
+    position: relative;
+}
+
+div.dataTables_length select {
+    width: 75px;
+    margin-bottom: -18px;
+     position: relative;
+}
+
+div.dataTables_filter label {
+
+    position: relative;
+    left: 530px;
+}
+
+div.dataTables_info {
+    padding-top: 8px;
+}
+
+div.dataTables_paginate {
+    position: relative;
+    left: 530px;
+    margin-top: -20px;
+}
+
+
+/* Header cells */
+table.dataTables thead th {
+    text-align: center;
+
+}
+
+
+table.pretty {
+    width: 100%;
+}
+
+table.pretty td,
+table.pretty th {
+    padding: 5px;
+
+}
+
+/* Header cells */
+table.pretty thead th {
+    text-align: center;
+
+}
+
+/* Body cells */
+table.pretty tbody th {
+    text-align: left;
+
+}
+
+table.pretty tbody td {
+    text-align: center;
+
+}
+
+
+table.pretty {
+
+    border-width: 1px 1px 1px 1px;
+    border-style: solid solid solid solid;
+     border-color: #cccccc;;
+}
+
+.pretty tr:nth-child(odd):hover td, tbody tr.odd:hover td {background:#EDF0F5;}
+.pretty tr:nth-child(even):hover td, tbody tr.even:hover td {background:#EDF0F5;}
+.pretty tr:nth-child(odd) td, tbody tr.odd td {background:#EDF0F5;}
+
+.my-modal {
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  left: 40%;
+  margin-left: -280px;
+  outline: medium none;
+  position: fixed;
+  top: 10%;
+  width: 840px;
+  height: 560px;
+
+}
+
+  .my-modal-body {
+    max-height: 840px;
+    overflow-y: auto;
+    padding: 15px;
+    position: relative;
+
+}
+
+.my-modal-footer {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 9px 15px;
+    background-color: #F5F5F5;
+    margin-left:-10px;
+    text-align:right;
+}
+
+.my-modal-header {
+    border-bottom: 1px solid #EEEEEE;
+    padding: 9px 15px;
+    background-color: #F5F5F5;
+}

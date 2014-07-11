@@ -1,0 +1,19 @@
+
+<%= stylesheet_link_tag "roles", :media => "all" %>
+<div style="color:#0077CC;font-size:2.0em;margin-top:0px;margin-left:50px"> Employees </div>
+<div style="margin-left:50px;margin-top:10px" >
+  <div id="myModal" class="modal hide fade my-modal" tabindex="-3" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="my-modal-header">
+    <div style="color:#0077CC;font-size:2.0em;margin-top:0px;margin-left:20px;"> <h3 id="myModalLabel"><CENTER></CENTER>Create Employee</h3></div>
+  </div>
+  <div class="my-modal-body">
+    <%= render :partial => 'form' %>
+  </div>
+</div>
+<div style="width:12%;margin-left:975px;margin-bottom:-70px;" >
+ <a href="#myModal" role="button" class=  "m-button" data-toggle="modal">Add Employee</a></div>
+</div>
+
+<div style="margin-left:50px;margin-top:90px">
+  <%= render "table" %>
+</div>

@@ -1,0 +1,66 @@
+
+<%= form_for [:admin, @user] do |f| %>
+<div style="margin-left:100px">
+  <% @user.errors.full_messages.each do |msg| %>
+  <li>
+    <%= msg %>
+  </li>
+  <% end %>
+
+   <div >
+    <%= f.label :username, :class => 'control-label' %>
+    <div class="">
+      <%= f.text_field :username, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div >
+    <%= f.label :first_name, :class => 'control-label' %>
+    <div class="">
+      <%= f.text_field :first_name, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div >
+    <%= f.label :last_name, :class => 'control-label' %>
+    <div class="">
+      <%= f.text_field :last_name, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div >
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div >
+    <%= f.label :birth_date, :class => 'control-label' %>
+    <div class="">
+      <%= f.text_field :birth_date, :class => 'vdatepicker ' %>
+    </div>
+  </div>
+
+
+  <div >
+    <%= f.label :password, :class => 'control-label' %>
+    <div class="">
+      <%= f.password_field :password, :class => 'password-field' %>
+    </div>
+  </div>
+
+
+    <div >
+      <%= f.check_box :is_active %>
+      <%= f.label :is_active, "Is an active user?", :class => 'control-label' %>
+    </div>
+  </div>
+
+  <div >
+    <div class="my-modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      <%= f.submit "Create Employee", :class => 'btn btn-primary' %>
+    </div>
+  </div>
+  <% end %>

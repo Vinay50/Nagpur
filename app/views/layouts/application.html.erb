@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Merlin</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Merlin</a>
+        <div class="container-fluid">
+          <ul class="nav" style="font-size: 1.2em;font-weight: normal;">
+            <% if user_signed_in? %>
+
+              <li class=""><%= link_to "Dashboard" %></li>
+            <%  end %>
+          </ul>
+          <ul class = "nav pull-right">
+            <% if user_signed_in? %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                 Hi ! <%= current_user.username rescue nil %> <b class="caret"></b></a>
+
+                  <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+
+              </li>
+            <% else %>
+              <li><%= link_to "Sign up ", new_user_registration_path, :class => "" %></li>
+              <li><%= link_to "Sign in ", new_user_session_path, :class => "" %></li>
+            <% end %>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="span9">
+        <%= bootstrap_flash %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
